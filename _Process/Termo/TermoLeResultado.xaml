@@ -1,0 +1,208 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="TermoLeResultado" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_strPalavra" Type="InArgument(x:String)" />
+    <x:Property Name="in_TransactionNumber" Type="InArgument(x:Int32)" />
+    <x:Property Name="io_dt_Regras" Type="InOutArgument(sd:DataTable)" />
+    <x:Property Name="out_bolContinuar" Type="OutArgument(x:Boolean)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1169,2629</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>TermoLeResultado_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="34">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="34">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Data.Entity</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="TermoLeResultado" sap:VirtualizedContainerService.HintSize="894,2564" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="enumPalavras" />
+      <Variable x:TypeArguments="x:Int32" Name="intContaSucesso">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:Int32" />
+        </Variable.Default>
+      </Variable>
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message - Inicio" sap:VirtualizedContainerService.HintSize="852,106" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;TermoLeResultado - Iniciado&quot;]" />
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" CloseMode="Never" DisplayName="Tela Principal" sap:VirtualizedContainerService.HintSize="852,2080" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" OpenMode="Never" ScopeGuid="dbe14026-db29-4091-92f2-b9eb5284a5b1" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Palavra" sap:VirtualizedContainerService.HintSize="818,1864" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:Int32" Name="intIndex" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:FindChildren Children="[enumPalavras]" DisplayName="Find Children 'WC-ROW'" Filter="&lt;webctrl shadowhostid='' tag='DIV' class='letter*' /&gt;" sap:VirtualizedContainerService.HintSize="776,106" sap2010:WorkflowViewState.IdRef="FindChildren_1" Scope="FIND_DESCENDANTS">
+              <ui:FindChildren.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="efac9c9c-cc1a-430f-b130-94e619e003dc" InformativeScreenshot="64245be72003ee0e0dd6b682e1f2532e" Selector="[String.Format(&quot;&lt;webctrl tag='WC-BOARD' /&gt;&lt;webctrl idx='{0}' shadowhostid='board0' tag='WC-ROW' /&gt;&quot;, in_TransactionNumber)]">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:FindChildren.Target>
+            </ui:FindChildren>
+            <ui:ForEach x:TypeArguments="ui:UiElement" CurrentIndex="[intIndex]" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="776,1625" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[enumPalavras]">
+              <ui:ForEach.Body>
+                <ActivityAction x:TypeArguments="ui:UiElement">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ui:UiElement" Name="letra" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Corpo" sap:VirtualizedContainerService.HintSize="740,1500" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="x:String" Name="strClassLetra" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NGetAttribute Attribute="class" DisplayName="Get Attribute - Letra" sap:VirtualizedContainerService.HintSize="698,186" sap2010:WorkflowViewState.IdRef="NGetAttribute_1" InUiElement="[letra]" Version="V1">
+                      <uix:NGetAttribute.Result>
+                        <OutArgument x:TypeArguments="x:String">[strClassLetra]</OutArgument>
+                      </uix:NGetAttribute.Result>
+                    </uix:NGetAttribute>
+                    <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="698,1181" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
+                      <ui:IfElseIf.ConditionBlocks>
+                        <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
+                          <ui:IfElseIfBlock BlockType="If" Condition="[strClassLetra.Contains(&quot;wrong&quot;)]">
+                            <ui:IfElseIfBlock.Then>
+                              <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{&quot;2&quot;,in_strPalavra.Substring(intIndex,1),&quot;&quot;}]" DataTable="[io_dt_Regras]" DisplayName="Add Data Row - io_dt_Regras" sap:VirtualizedContainerService.HintSize="334,185" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+                            </ui:IfElseIfBlock.Then>
+                          </ui:IfElseIfBlock>
+                          <ui:IfElseIfBlock BlockType="ElseIf" Condition="[strClassLetra.Contains(&quot;right&quot;)]">
+                            <ui:IfElseIfBlock.Then>
+                              <Sequence sap:VirtualizedContainerService.HintSize="376,377" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{&quot;3&quot;,intIndex.ToString,in_strPalavra.Substring(intIndex,1)}]" DataTable="[io_dt_Regras]" DisplayName="Add Data Row - io_dt_Regras" sap:VirtualizedContainerService.HintSize="334,185" sap2010:WorkflowViewState.IdRef="AddDataRow_2" />
+                                <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:Int32">[intContaSucesso]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:Int32">[intContaSucesso+1]</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                              </Sequence>
+                            </ui:IfElseIfBlock.Then>
+                          </ui:IfElseIfBlock>
+                          <ui:IfElseIfBlock BlockType="ElseIf" Condition="[strClassLetra.Contains(&quot;place&quot;)]">
+                            <ui:IfElseIfBlock.Then>
+                              <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{&quot;1&quot;,in_strPalavra.Substring(intIndex,1),&quot;&quot;}]" DataTable="[io_dt_Regras]" DisplayName="Add Data Row - io_dt_Regras" sap:VirtualizedContainerService.HintSize="334,185" sap2010:WorkflowViewState.IdRef="AddDataRow_3" />
+                            </ui:IfElseIfBlock.Then>
+                          </ui:IfElseIfBlock>
+                        </sc:BindingList>
+                      </ui:IfElseIf.ConditionBlocks>
+                    </ui:IfElseIf>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEach.Body>
+            </ui:ForEach>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="1923, 10, 1294, 1039" BrowserType="Chrome" ContentHash="3EErKp0V2EqzOZsOMZiIOw" IconBase64="iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAALEwAACxMBAJqcGAAABFFJREFUeF7tnbFOFGEUhfcReAQegUfgOcwyzsySQHanwERtSITGECu2tbCisPEBNCRsQkhoCGBjjA0KdmiooF3n7oxR5Ji9CO7AueckX0Iyy9nMf7/9ZxaKaY1Lkaaz3SRf6c1lgyLJjnpz+VDcac5Gs2p3+t00nanHeP3Y4K0IvIG4V5QylLOsxzo+S2k61XuYr+MycX+ZX7fZ1mPGWUzT6V47P8QF4t6TdA5KCabrcV/O6JOv4fNTSXB1J9C2H4n59XrsVaobPvRCwUrR/u3GUHf7EekMRsO374r4BYKd0S5QJFkfHRT8FEm+qu0/NOVloPzh7OoBEYFiLj8yAeBBEQMJEBwJEBwJEBwJEBwJEBwJEBwJEBwJEBwJEBwJEBwJEBwJEBwJEJw7IcCThWK4trwy7D9/QY+dp50vWocmaFQAW5BPHz4OI+bky/Ho/NG6TJLGBHj26Onw4vy8Xo6YsfO3dUDrMykaE+DNxut6GWJn690mXJ9J0ZgAh3v79RLEztfyUoDWZ1I0JkDUa/+f+X56CtdnUkiAhiMBgkcCBI8ECB4JEDxhvwXsbu/USxA79kFA6zMpGhNAfwiqsvHyFVyfSdGYAI8XitH1L3Kavv4bjQlg2N/BbSewbfDk8/HwW7kgt8VtBvX/K3ae7/f2R+d9F/4r2KgA/5PbDOpnQQI4gvpZkACOoH4WJIAjqJ8FCeAI6mdBAjiC+lmQAI6gfhYkgCOonwUJ4AjqZ0ECOIL6WZAAjqB+FiSAI6ifBQngCOpnQQI4gvpZkACOoH4WJIAjqJ8FCeAI6mdBAjiC+lmQAI6gfhYkgCOonwUJ4AjqZ0ECOIL6WZAAjqB+FiSAI6ifBQngCOpnQQI4gvpZkACOoH4WJIAjqJ8FCeAI6mdBAjiC+lmQAI6gfhYkgCOonwUJ4AjqZ0ECOIL6WZAAjqB+FiSAI6ifBQngCOpnQQI4gvpZkACOoH4WJIAjqJ8FCeAI6mdBAjiC+lmQAI6gfhYkgCOonwUJ4AjqZ0ECOIL6WZAAjqB+FiSAI6ifBQngCOpnQQI4gvpZkACOoH4WJIAjqJ8FCeAI6mdBAjiC+lmQAI6gfhYkgCOonwUJ4AjqZ0ECOIL6WZAAjqB+FiSAI6ifBVoBLs7P6/HdLNaD+lmgFcCeSH4b2d3egf0s0Aqwtrxy413Anu9vj7hH/SzQCmDY8OwTbM/sv07sOf9bbzfph29QCyDGIwGCIwGCIwGCIwGCIwGCIwGCIwGCIwGCIwGCIwGC0yqS/AgdECE4K3eAzgAcECHIBrYDrOKDgp0iyfqtop3OooOCn26azrQsugxEpNz+f0a7QDxs5vX4qxTtrI9eKPiwWddj/5WlNJ3qJZ0D9AuCiHZ+aLOux345i2k6LQmIqYY/XY8bx+zQ5YAPm+lfP/ko1Y1hpm8H955scOWG7zrpPkhnqh1hJMPZ1TcQd4kiyY6qoeer4wffav0AbwR1WDgQDb8AAAAASUVORK5CYII=" InformativeScreenshot="616afa7809cadaa242f4cf750b157cc1.png" Reference="Z3KLTBztLEOyuuNBzmPzsQ/2vugip0xuUSQTwG31rxdUQ" Selector="&lt;html app='chrome.exe' title='Termo' /&gt;" Url="https://term.ooo/" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <Assign DisplayName="Assign - out_bolContinuar" sap:VirtualizedContainerService.HintSize="852,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:Boolean">[out_bolContinuar]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:Boolean">[Not(intContaSucesso = enumPalavras.Count)]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:LogMessage DisplayName="Log Message - Fim" sap:VirtualizedContainerService.HintSize="852,106" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;TermoLeResultado - Finalizado&quot;]" />
+  </Sequence>
+</Activity>

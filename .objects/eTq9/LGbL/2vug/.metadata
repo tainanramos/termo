@@ -1,0 +1,14 @@
+﻿{
+  "Id": "2vugip0xuUSQTwG31rxdUQ",
+  "Reference": "Z3KLTBztLEOyuuNBzmPzsQ/2vugip0xuUSQTwG31rxdUQ",
+  "ParentRef": "Z3KLTBztLEOyuuNBzmPzsQ/LGbLwJ4IQEi5bgeAryhVNQ",
+  "Name": "Tela Principal",
+  "Type": "Screen",
+  "TaxonomyType": "Screen",
+  "Created": "2022-07-25T14:41:53.8390694Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=22.4.5.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=22.4.1.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2022-07-25T14:41:53.8390694Z"
+}
