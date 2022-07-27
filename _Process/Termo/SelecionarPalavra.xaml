@@ -112,13 +112,13 @@
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="regra" />
           </ActivityAction.Argument>
           <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[regra.Item(&quot;TIPO&quot;).ToString]" sap:VirtualizedContainerService.HintSize="497,204" sap2010:WorkflowViewState.IdRef="Switch`1_2">
-            <Sequence x:Key="0" DisplayName="Tamnho da palavra" sap:VirtualizedContainerService.HintSize="476,429" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <Sequence x:Key="0" DisplayName="Tamnho da palavra" sap:VirtualizedContainerService.HintSize="480,275" sap2010:WorkflowViewState.IdRef="Sequence_3">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,183" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,287" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                 <TryCatch.Try>
                   <Assign DisplayName="Assign - io_dt_Palavras" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_1">
                     <Assign.To>
@@ -130,7 +130,7 @@
                   </Assign>
                 </TryCatch.Try>
                 <TryCatch.Catches>
-                  <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                  <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -147,13 +147,13 @@
                 </TryCatch.Catches>
               </TryCatch>
             </Sequence>
-            <Sequence x:Key="1" DisplayName="Contém letra" sap:VirtualizedContainerService.HintSize="476,429" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <Sequence x:Key="1" DisplayName="Contém letra" sap:VirtualizedContainerService.HintSize="480,275" sap2010:WorkflowViewState.IdRef="Sequence_4">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,183" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,287" sap2010:WorkflowViewState.IdRef="TryCatch_2">
                 <TryCatch.Try>
                   <Assign DisplayName="Assign - io_dt_Palavras" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_2">
                     <Assign.To>
@@ -165,7 +165,7 @@
                   </Assign>
                 </TryCatch.Try>
                 <TryCatch.Catches>
-                  <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,21" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+                  <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_2">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -182,13 +182,13 @@
                 </TryCatch.Catches>
               </TryCatch>
             </Sequence>
-            <Sequence x:Key="2" DisplayName="Não contém letra" sap:VirtualizedContainerService.HintSize="476,429" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <Sequence x:Key="2" DisplayName="Não contém letra" sap:VirtualizedContainerService.HintSize="480,275" sap2010:WorkflowViewState.IdRef="Sequence_5">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,183" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,287" sap2010:WorkflowViewState.IdRef="TryCatch_3">
                 <TryCatch.Try>
                   <Assign DisplayName="Assign - io_dt_Palavras" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_3">
                     <Assign.To>
@@ -200,7 +200,7 @@
                   </Assign>
                 </TryCatch.Try>
                 <TryCatch.Catches>
-                  <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,21" sap2010:WorkflowViewState.IdRef="Catch`1_3">
+                  <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_3">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -217,13 +217,13 @@
                 </TryCatch.Catches>
               </TryCatch>
             </Sequence>
-            <Sequence x:Key="3" DisplayName="Posição exata" sap:VirtualizedContainerService.HintSize="476,429" sap2010:WorkflowViewState.IdRef="Sequence_6">
+            <Sequence x:Key="3" DisplayName="Posição exata" sap:VirtualizedContainerService.HintSize="480,275" sap2010:WorkflowViewState.IdRef="Sequence_6">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,183" sap2010:WorkflowViewState.IdRef="TryCatch_4">
+              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,287" sap2010:WorkflowViewState.IdRef="TryCatch_4">
                 <TryCatch.Try>
                   <Assign DisplayName="Assign - io_dt_Palavras" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_4">
                     <Assign.To>
@@ -235,7 +235,7 @@
                   </Assign>
                 </TryCatch.Try>
                 <TryCatch.Catches>
-                  <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,21" sap2010:WorkflowViewState.IdRef="Catch`1_4">
+                  <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_4">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -261,7 +261,7 @@
         <OutArgument x:TypeArguments="x:String">[out_strPalavra]</OutArgument>
       </Assign.To>
       <Assign.Value>
-        <InArgument x:TypeArguments="x:String">[io_dt_Palavras.Rows(CInt(Int(io_dt_Palavras.RowCount * Rnd()))).Item("PALAVRA").ToString]</InArgument>
+        <InArgument x:TypeArguments="x:String">[io_dt_Palavras.Rows(0).Item("PALAVRA").ToString]</InArgument>
       </Assign.Value>
     </Assign>
     <ui:LogMessage DisplayName="Log Message - Fim" sap:VirtualizedContainerService.HintSize="531,106" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;SelecionarPalavra - Finalizado&quot;]" />
