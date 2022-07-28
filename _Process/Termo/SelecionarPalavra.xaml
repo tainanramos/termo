@@ -7,7 +7,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1169,1182</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1169,1328</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>SelecionarPalavra_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -78,7 +78,7 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="SelecionarPalavra" sap:VirtualizedContainerService.HintSize="573,1117" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="SelecionarPalavra" sap:VirtualizedContainerService.HintSize="573,1263" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -256,6 +256,7 @@
         </ActivityAction>
       </ui:ForEachRow.Body>
     </ui:ForEachRow>
+    <ui:LogMessage DisplayName="Log Message - QNTD Palavras" sap:VirtualizedContainerService.HintSize="531,106" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;Range de &quot;+io_dt_Palavras.RowCount.ToString+&quot; palavras.&quot;]" />
     <Assign DisplayName="Assign - out_strPalavra" sap:VirtualizedContainerService.HintSize="531,60" sap2010:WorkflowViewState.IdRef="Assign_5">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[out_strPalavra]</OutArgument>
