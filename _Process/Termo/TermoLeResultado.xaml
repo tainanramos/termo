@@ -8,7 +8,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1169,2629</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1169,2631</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>TermoLeResultado_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="34">
@@ -73,7 +73,6 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>NPOI</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
@@ -86,14 +85,10 @@
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="TermoLeResultado" sap:VirtualizedContainerService.HintSize="894,2564" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="TermoLeResultado" sap:VirtualizedContainerService.HintSize="894,2566" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="enumPalavras" />
-      <Variable x:TypeArguments="x:Int32" Name="intContaSucesso">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:Int32" />
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:Int32" Default="0" Name="intContaSucesso" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -101,13 +96,13 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message - Inicio" sap:VirtualizedContainerService.HintSize="852,106" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;TermoLeResultado - Iniciado&quot;]" />
-    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" CloseMode="Never" DisplayName="Tela Principal" sap:VirtualizedContainerService.HintSize="852,2080" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" OpenMode="Never" ScopeGuid="dbe14026-db29-4091-92f2-b9eb5284a5b1" Version="V2">
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" CloseMode="Never" DisplayName="Tela Principal" sap:VirtualizedContainerService.HintSize="852,2082" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" OpenMode="Never" ScopeGuid="dbe14026-db29-4091-92f2-b9eb5284a5b1" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Palavra" sap:VirtualizedContainerService.HintSize="818,1864" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence DisplayName="Palavra" sap:VirtualizedContainerService.HintSize="571,1866" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Int32" Name="intIndex" />
             </Sequence.Variables>
@@ -116,7 +111,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:FindChildren Children="[enumPalavras]" DisplayName="Find Children 'WC-ROW'" Filter="&lt;webctrl shadowhostid='' tag='DIV' class='letter*' /&gt;" sap:VirtualizedContainerService.HintSize="776,106" sap2010:WorkflowViewState.IdRef="FindChildren_1" Scope="FIND_DESCENDANTS">
+            <ui:FindChildren Children="[enumPalavras]" DisplayName="Find Children 'WC-ROW'" Filter="&lt;webctrl shadowhostid='' tag='DIV' class='letter*' /&gt;" sap:VirtualizedContainerService.HintSize="529,106" sap2010:WorkflowViewState.IdRef="FindChildren_1" Scope="FIND_DESCENDANTS">
               <ui:FindChildren.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="efac9c9c-cc1a-430f-b130-94e619e003dc" InformativeScreenshot="64245be72003ee0e0dd6b682e1f2532e" Selector="[String.Format(&quot;&lt;webctrl tag='WC-BOARD' /&gt;&lt;webctrl idx='{0}' shadowhostid='board0' tag='WC-ROW' /&gt;&quot;, in_TransactionNumber)]">
                   <ui:Target.TimeoutMS>
@@ -128,13 +123,13 @@
                 </ui:Target>
               </ui:FindChildren.Target>
             </ui:FindChildren>
-            <ui:ForEach x:TypeArguments="ui:UiElement" CurrentIndex="[intIndex]" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="776,1625" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[enumPalavras]">
+            <ui:ForEach x:TypeArguments="ui:UiElement" CurrentIndex="[intIndex]" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="529,1626" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[enumPalavras]">
               <ui:ForEach.Body>
                 <ActivityAction x:TypeArguments="ui:UiElement">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="ui:UiElement" Name="letra" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Corpo" sap:VirtualizedContainerService.HintSize="740,1500" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <Sequence DisplayName="Corpo" sap:VirtualizedContainerService.HintSize="493,1501" sap2010:WorkflowViewState.IdRef="Sequence_3">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:String" Name="strClassLetra" />
                     </Sequence.Variables>
@@ -143,12 +138,12 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <uix:NGetAttribute Attribute="class" DisplayName="Get Attribute - Letra" sap:VirtualizedContainerService.HintSize="698,186" sap2010:WorkflowViewState.IdRef="NGetAttribute_1" InUiElement="[letra]" Version="V1">
+                    <uix:NGetAttribute Attribute="class" DisplayName="Get Attribute - Letra" sap:VirtualizedContainerService.HintSize="451,186" sap2010:WorkflowViewState.IdRef="NGetAttribute_1" InUiElement="[letra]" Version="V1">
                       <uix:NGetAttribute.Result>
                         <OutArgument x:TypeArguments="x:String">[strClassLetra]</OutArgument>
                       </uix:NGetAttribute.Result>
                     </uix:NGetAttribute>
-                    <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="698,1181" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
+                    <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="451,1181" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
                       <ui:IfElseIf.ConditionBlocks>
                         <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
                           <ui:IfElseIfBlock BlockType="If" Condition="[strClassLetra.Contains(&quot;wrong&quot;)]">
@@ -192,7 +187,7 @@
         </ActivityAction>
       </uix:NApplicationCard.Body>
       <uix:NApplicationCard.TargetApp>
-        <uix:TargetApp Area="1923, 10, 1294, 1039" BrowserType="Chrome" ContentHash="3EErKp0V2EqzOZsOMZiIOw" IconBase64="iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAALEwAACxMBAJqcGAAABFFJREFUeF7tnbFOFGEUhfcReAQegUfgOcwyzsySQHanwERtSITGECu2tbCisPEBNCRsQkhoCGBjjA0KdmiooF3n7oxR5Ji9CO7AueckX0Iyy9nMf7/9ZxaKaY1Lkaaz3SRf6c1lgyLJjnpz+VDcac5Gs2p3+t00nanHeP3Y4K0IvIG4V5QylLOsxzo+S2k61XuYr+MycX+ZX7fZ1mPGWUzT6V47P8QF4t6TdA5KCabrcV/O6JOv4fNTSXB1J9C2H4n59XrsVaobPvRCwUrR/u3GUHf7EekMRsO374r4BYKd0S5QJFkfHRT8FEm+qu0/NOVloPzh7OoBEYFiLj8yAeBBEQMJEBwJEBwJEBwJEBwJEBwJEBwJEBwJEBwJEBwJEBwJEBwJEBwJEJw7IcCThWK4trwy7D9/QY+dp50vWocmaFQAW5BPHz4OI+bky/Ho/NG6TJLGBHj26Onw4vy8Xo6YsfO3dUDrMykaE+DNxut6GWJn690mXJ9J0ZgAh3v79RLEztfyUoDWZ1I0JkDUa/+f+X56CtdnUkiAhiMBgkcCBI8ECB4JEDxhvwXsbu/USxA79kFA6zMpGhNAfwiqsvHyFVyfSdGYAI8XitH1L3Kavv4bjQlg2N/BbSewbfDk8/HwW7kgt8VtBvX/K3ae7/f2R+d9F/4r2KgA/5PbDOpnQQI4gvpZkACOoH4WJIAjqJ8FCeAI6mdBAjiC+lmQAI6gfhYkgCOonwUJ4AjqZ0ECOIL6WZAAjqB+FiSAI6ifBQngCOpnQQI4gvpZkACOoH4WJIAjqJ8FCeAI6mdBAjiC+lmQAI6gfhYkgCOonwUJ4AjqZ0ECOIL6WZAAjqB+FiSAI6ifBQngCOpnQQI4gvpZkACOoH4WJIAjqJ8FCeAI6mdBAjiC+lmQAI6gfhYkgCOonwUJ4AjqZ0ECOIL6WZAAjqB+FiSAI6ifBQngCOpnQQI4gvpZkACOoH4WJIAjqJ8FCeAI6mdBAjiC+lmQAI6gfhYkgCOonwUJ4AjqZ0ECOIL6WZAAjqB+FiSAI6ifBQngCOpnQQI4gvpZkACOoH4WJIAjqJ8FCeAI6mdBAjiC+lmQAI6gfhYkgCOonwUJ4AjqZ0ECOIL6WZAAjqB+FiSAI6ifBVoBLs7P6/HdLNaD+lmgFcCeSH4b2d3egf0s0Aqwtrxy413Anu9vj7hH/SzQCmDY8OwTbM/sv07sOf9bbzfph29QCyDGIwGCIwGCIwGCIwGCIwGCIwGCIwGCIwGCIwGCIwGC0yqS/AgdECE4K3eAzgAcECHIBrYDrOKDgp0iyfqtop3OooOCn26azrQsugxEpNz+f0a7QDxs5vX4qxTtrI9eKPiwWddj/5WlNJ3qJZ0D9AuCiHZ+aLOux345i2k6LQmIqYY/XY8bx+zQ5YAPm+lfP/ko1Y1hpm8H955scOWG7zrpPkhnqh1hJMPZ1TcQd4kiyY6qoeer4wffav0AbwR1WDgQDb8AAAAASUVORK5CYII=" InformativeScreenshot="616afa7809cadaa242f4cf750b157cc1.png" Reference="Z3KLTBztLEOyuuNBzmPzsQ/2vugip0xuUSQTwG31rxdUQ" Selector="&lt;html app='chrome.exe' title='Termo' /&gt;" Url="https://term.ooo/" />
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" ContentHash="g62vBD5pjEW12_ag2RuWRg" IconBase64="iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAALEwAACxMBAJqcGAAABFFJREFUeF7tnbFOFGEUhfcReAQegUfgOcwyzsySQHanwERtSITGECu2tbCisPEBNCRsQkhoCGBjjA0KdmiooF3n7oxR5Ji9CO7AueckX0Iyy9nMf7/9ZxaKaY1Lkaaz3SRf6c1lgyLJjnpz+VDcac5Gs2p3+t00nanHeP3Y4K0IvIG4V5QylLOsxzo+S2k61XuYr+MycX+ZX7fZ1mPGWUzT6V47P8QF4t6TdA5KCabrcV/O6JOv4fNTSXB1J9C2H4n59XrsVaobPvRCwUrR/u3GUHf7EekMRsO374r4BYKd0S5QJFkfHRT8FEm+qu0/NOVloPzh7OoBEYFiLj8yAeBBEQMJEBwJEBwJEBwJEBwJEBwJEBwJEBwJEBwJEBwJEBwJEBwJEBwJEJw7IcCThWK4trwy7D9/QY+dp50vWocmaFQAW5BPHz4OI+bky/Ho/NG6TJLGBHj26Onw4vy8Xo6YsfO3dUDrMykaE+DNxut6GWJn690mXJ9J0ZgAh3v79RLEztfyUoDWZ1I0JkDUa/+f+X56CtdnUkiAhiMBgkcCBI8ECB4JEDxhvwXsbu/USxA79kFA6zMpGhNAfwiqsvHyFVyfSdGYAI8XitH1L3Kavv4bjQlg2N/BbSewbfDk8/HwW7kgt8VtBvX/K3ae7/f2R+d9F/4r2KgA/5PbDOpnQQI4gvpZkACOoH4WJIAjqJ8FCeAI6mdBAjiC+lmQAI6gfhYkgCOonwUJ4AjqZ0ECOIL6WZAAjqB+FiSAI6ifBQngCOpnQQI4gvpZkACOoH4WJIAjqJ8FCeAI6mdBAjiC+lmQAI6gfhYkgCOonwUJ4AjqZ0ECOIL6WZAAjqB+FiSAI6ifBQngCOpnQQI4gvpZkACOoH4WJIAjqJ8FCeAI6mdBAjiC+lmQAI6gfhYkgCOonwUJ4AjqZ0ECOIL6WZAAjqB+FiSAI6ifBQngCOpnQQI4gvpZkACOoH4WJIAjqJ8FCeAI6mdBAjiC+lmQAI6gfhYkgCOonwUJ4AjqZ0ECOIL6WZAAjqB+FiSAI6ifBQngCOpnQQI4gvpZkACOoH4WJIAjqJ8FCeAI6mdBAjiC+lmQAI6gfhYkgCOonwUJ4AjqZ0ECOIL6WZAAjqB+FiSAI6ifBVoBLs7P6/HdLNaD+lmgFcCeSH4b2d3egf0s0Aqwtrxy413Anu9vj7hH/SzQCmDY8OwTbM/sv07sOf9bbzfph29QCyDGIwGCIwGCIwGCIwGCIwGCIwGCIwGCIwGCIwGCIwGC0yqS/AgdECE4K3eAzgAcECHIBrYDrOKDgp0iyfqtop3OooOCn26azrQsugxEpNz+f0a7QDxs5vX4qxTtrI9eKPiwWddj/5WlNJ3qJZ0D9AuCiHZ+aLOux345i2k6LQmIqYY/XY8bx+zQ5YAPm+lfP/ko1Y1hpm8H955scOWG7zrpPkhnqh1hJMPZ1TcQd4kiyY6qoeer4wffav0AbwR1WDgQDb8AAAAASUVORK5CYII=" InformativeScreenshot="616afa7809cadaa242f4cf750b157cc1.png" Reference="Z3KLTBztLEOyuuNBzmPzsQ/2vugip0xuUSQTwG31rxdUQ" Selector="&lt;html app='chrome.exe' title='Termo' /&gt;" Url="https://term.ooo" />
       </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
     <Assign DisplayName="Assign - out_bolContinuar" sap:VirtualizedContainerService.HintSize="852,60" sap2010:WorkflowViewState.IdRef="Assign_2">
